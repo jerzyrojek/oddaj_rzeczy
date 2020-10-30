@@ -1,0 +1,54 @@
+
+.mainHeader {
+  height: 828px;
+  display:flex;
+  justify-content: flex-end;
+  &__image {
+    position: absolute;
+    top:0;
+    left:-483px;
+  }
+  &__text {
+    text-align: center;
+    width: 675px;
+    display:flex;
+    flex-direction: column;
+    margin-top:210px;
+    margin-right:50px;
+    h1 {
+      font-size:38px;
+      font-weight: 400;
+      line-height: 55px;
+      margin-bottom:25px;
+      letter-spacing: -0.76px;
+      span {
+        display: block;
+      }
+    }
+    img {
+      margin-bottom:65px;
+    }
+
+    button{
+      font-size:36px;
+      text-transform: uppercase;
+      font-family: inherit;
+      cursor: pointer;
+      color:$primaryTextColor;
+      width:310px;
+      background: white;
+      border:0.75px solid $primaryTextColor;
+      &:hover {
+        transform:scale(1.1);
+        transition: 0.4s ease-in;
+      }
+      &:first-child {
+        padding:13px 93px;
+        margin-right: 44px;
+      }
+      &:last-child {
+        padding:13px 51px;
+      }
+    }
+  }
+}
