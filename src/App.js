@@ -3,12 +3,13 @@ import {BrowserRouter, Route, Switch} from "react-router-dom";
 import * as ROUTES from "./routes.js";
 import Home from "./components/Home";
 import NotFoundPage from "./components/NotFoundPage";
+import Navigation from "./components/Navigation";
 
 function App() {
     return (
-        <>
-            <h1>Hello World</h1>
+        <div className="app">
             <BrowserRouter>
+                <Navigation/>
                 <Switch>
                     <Route path={ROUTES.GIVEAWAY}/>
                     <Route path={ROUTES.LOGIN}/>
@@ -18,7 +19,7 @@ function App() {
                     <Route exact path={ROUTES.NOT_FOUND} component={NotFoundPage}/>
                 </Switch>
             </BrowserRouter>
-        </>
+        </div>
     );
 }
 
