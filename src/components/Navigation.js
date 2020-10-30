@@ -15,7 +15,7 @@ const Navbar = () => {
                     <Scroll.Link to={"/"}>
                         <li>Start</li>
                     </Scroll.Link>
-                    <Scroll.Link to={"/"}>
+                    <Scroll.Link to="three-columns" smooth={true}>
                         <li>O co chodzi?</li>
                     </Scroll.Link>
                     <Scroll.Link to="about-us" smooth={true}>
