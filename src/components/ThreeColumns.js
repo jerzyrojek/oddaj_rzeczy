@@ -2,7 +2,7 @@ import React from 'react';
 
 const ThreeColumns = () => {
     return (
-        <section className="threeColumns" id="three-columns">
+        <section className="threeColumns">
             <div className="threeColumns__item">
                 <h2>10</h2>
                 <h3>Oddanych Worków</h3>
