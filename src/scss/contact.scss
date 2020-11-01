@@ -1,0 +1,90 @@
+.contact {
+  height: 1026px;
+  margin-top:80px;
+  position:relative;
+  &:after {
+    content: "";
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+    background-image:url("../assets/Background-Contact-Form.jpg");
+    width: 100%;
+    height: 100%;
+    opacity:0.3;
+    z-index:-1;
+  }
+
+  &__content {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      margin-bottom:25px;
+      font-size:38px;
+      font-weight: 400;
+    }
+    img {
+      margin-bottom: 70px;
+    }
+
+    form {
+      display:flex;
+      flex-direction: column;
+
+      button {
+        cursor:pointer;
+        margin-top:40px;
+        align-self: flex-end;
+        background:none;
+        font-family: inherit;
+        font-size:18px;
+        padding: 13px 52px;
+        outline:none;
+        border:0.75px solid $primaryTextColor;
+      }
+    }
+
+    .formFirstRow {
+      display:flex;
+      margin-bottom:40px;
+      .formField {
+        width: 50%;
+        &:first-child {
+          margin-right: 16px;
+        }
+      }
+    }
+    .formField {
+      display:flex;
+      flex-direction: column;
+
+      label {
+        font-size:16px;
+        font-weight: 600;
+        margin-bottom:12px;
+      }
+      span {
+        color:red;
+        font-size:11px;
+        margin-top:5px;
+      }
+
+      input {
+        outline:none;
+        border:none;
+        background:none;
+        line-height: 24px;
+        font-size:18px;
+        color:$primaryTextColor;
+        border-bottom: 1px solid $primaryTextColor;
+        &::placeholder {
+          font-size:18px;
+          color:#3C3C3C26;
+        }
+      }
+    }
+  }
+
+}
