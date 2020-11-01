@@ -24,7 +24,7 @@ const Navbar = () => {
                     <Scroll.Link to={"who-we-help"} smooth={true}>
                         <li>Fundacja i organizacje</li>
                     </Scroll.Link>
-                    <Scroll.Link to={"/"}>
+                    <Scroll.Link to={"contact-form"}  smooth={true}>
                         <li>Kontakt</li>
                     </Scroll.Link>
                 </ul>
