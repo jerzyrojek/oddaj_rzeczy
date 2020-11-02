@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import decoration from "../assets/Decoration.svg";
+import facebookLogo from "../assets/Facebook.svg";
+import instagramLogo from "../assets/Instagram.svg";
 import {Form, Field} from "react-final-form";
 
 const Contact = () => {
@@ -31,14 +33,16 @@ const Contact = () => {
 
     return (
         <section className="contact" id="contact-form">
-            <div className="container">
+            <div className="contact__wrapper container">
                 <div className="contact__content">
                     <h1>Skontaktuj się z nami</h1>
                     <img alt="decoration" src={decoration}/>
-                    {responseStatus && responseStatus.status === 200 &&
-                    <p>Wiadomość została wysłana! Wkrótce się skontaktujemy.</p>}
-                    {responseStatus && responseStatus.status === 400 &&
-                    <p>Wysłanie wiadomości nie powiodło się! Spróbuj ponownie.</p>}
+                    <div className="notification">
+                        {responseStatus && responseStatus.status === 200 &&
+                        <p className="success">Wiadomość została wysłana!<span>Wkrótce się skontaktujemy.</span></p>}
+                        {responseStatus && responseStatus.status === 400 &&
+                        <p className="error">Wysłanie wiadomości nie powiodło się! <span>Spróbuj ponownie.</span></p>}
+                    </div>
                     <Form
                         onSubmit={handleContactFormSubmit}
                         render={({handleSubmit}) => (
@@ -51,7 +55,7 @@ const Contact = () => {
                                                 <input {...input}
                                                        style={meta.error && meta.touched ? {borderBottom: "1px solid red"} : {}}
                                                        type="text" placeholder="Krzysztof"/>
-                                                {meta.error && meta.touched && <span>{meta.error}</span>}
+                                                {meta.error && meta.touched ? <span>{meta.error}</span> : <span style={{height:"15px"}}/>}
                                             </div>
                                         )}
                                     </Field>
@@ -62,7 +66,7 @@ const Contact = () => {
                                                 <input {...input}
                                                        style={meta.error && meta.touched ? {borderBottom: "1px solid red"} : {}}
                                                        type="text" placeholder="abc@xyz.pl"/>
-                                                {meta.error && meta.touched && <span>{meta.error}</span>}
+                                                {meta.error && meta.touched ? <span>{meta.error}</span> : <span style={{height:"15px"}}/>}
                                             </div>
                                         )}
                                     </Field>
@@ -74,12 +78,12 @@ const Contact = () => {
                                     {({input, meta}) => (
                                         <div className="formField">
                                             <label>Wpisz swoją wiadomość</label>
-                                            <input {...input} type="text"
-                                                   style={meta.error && meta.touched ? {borderBottom: "1px solid red"} : {}}
-                                                   placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                            <textarea {...input}
+                                                      style={meta.error && meta.touched ? {borderBottom: "1px solid red"} : {}}
+                                                      placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
                                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."/>
-                                            {meta.error && meta.touched && <span>{meta.error}</span>}
+                                            {meta.error && meta.touched ? <span>{meta.error}</span> : <span style={{height:"15px"}}/>}
                                         </div>
                                     )}
                                 </Field>
@@ -89,6 +93,13 @@ const Contact = () => {
                             </form>
                         )}
                     />
+                </div>
+                <div className="footer">
+                    <p className="footer__copyright">Copyright by Coders Lab</p>
+                    <div className="footer__icons">
+                        <img alt="facebookLogo" src={facebookLogo}/>
+                        <img alt="instagramLogo" src={instagramLogo}/>
+                    </div>
                 </div>
             </div>
         </section>
