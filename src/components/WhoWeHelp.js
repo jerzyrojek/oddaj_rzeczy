@@ -33,12 +33,13 @@ const WhoWeHelp = ({firebase}) => {
         return () => {
             mounted = false;
         }
-
+        //the data get is only supposed to run once
+        // eslint-disable-next-line
     }, [])
 
     useEffect(() => {
         setCurrentList(foundationsList);
-    },[foundationsList])
+    }, [foundationsList])
 
     useEffect(() => {
         setCurrentPage(1);
@@ -51,6 +52,8 @@ const WhoWeHelp = ({firebase}) => {
         if (currentChoice === "local") {
             setCurrentList(localList);
         }
+        //the above dependencies should not change here as data is only fetched once
+        // eslint-disable-next-line
     }, [currentChoice])
 
     const handleOptionClick = (chosenOption) => {
