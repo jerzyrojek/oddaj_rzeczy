@@ -4,6 +4,7 @@ import * as ROUTES from "./routes.js";
 import Home from "./components/Home";
 import NotFoundPage from "./components/NotFoundPage";
 import Navigation from "./components/Navigation";
+import LoginPage from "./components/LoginPage";
 
 function App() {
     return (
@@ -12,7 +13,7 @@ function App() {
                 <Navigation/>
                 <Switch>
                     <Route path={ROUTES.GIVEAWAY}/>
-                    <Route path={ROUTES.LOGIN}/>
+                    <Route path={ROUTES.LOGIN} component={LoginPage}/>
                     <Route path={ROUTES.REGISTER}/>
                     <Route path={ROUTES.LOGOUT}/>
                     <Route exact path={ROUTES.HOME} component={Home}/>
