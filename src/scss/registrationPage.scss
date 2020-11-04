@@ -1,0 +1,116 @@
+.registrationPage {
+  height: calc(100vh - 140px);
+  display: flex;
+
+  &__content {
+    margin-top:125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      margin-bottom: 25px;
+      font-size:40px;
+      font-weight: 400;
+    }
+
+    .notification {
+      height: 60px;
+      font-weight: 600;
+      text-align: center;
+      span {
+        display: block;
+      }
+      .success {
+        margin-top:6px;
+        color:#05cb05;
+      }
+      .error {
+        margin-top:5px;
+        color:red;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 504px;
+
+      .formInputs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 385px;
+        height: 328px;
+        margin-bottom: 40px;
+        background: $sectionBackgroundColor;
+
+        .formField:first-child {
+          margin-bottom: 31px;
+        }
+        .formField:last-child {
+          margin-top: 31px;
+        }
+      }
+
+      .formField {
+        width: 250px;
+        height: 62px;
+        display: flex;
+        flex-direction: column;
+
+        label {
+          font-size: 16px;
+          font-weight: 600;
+        }
+
+        input {
+          outline: none;
+          border: none;
+          background: none;
+          line-height: 40px;
+          font-size: 18px;
+          color: $primaryTextColor;
+          border-bottom: 1px solid $primaryTextColor;
+
+          &::placeholder {
+            font-size: 18px;
+            color: #3C3C3C26;
+          }
+        }
+
+        span {
+          color: red;
+          font-size: 11px;
+          font-weight: 700;
+        }
+      }
+
+      .formButtons {
+        font-size: 18px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+          text-decoration: none;
+          color: inherit;
+        }
+
+        button {
+          padding: 13px 16px;
+          background: none;
+          font-size: 18px;
+          cursor: pointer;
+          font-family: inherit;
+          outline: none;
+          border: 0.75px solid $primaryTextColor;
+        }
+      }
+    }
+
+  }
+}
