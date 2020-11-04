@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 import * as ROUTES from "../routes";
 import * as Scroll from "react-scroll";
 import AuthUserContext from "./AuthUserContext";
@@ -7,10 +7,11 @@ import {withFirebase} from "./Firebase/FirebaseContext";
 
 const Navbar = ({firebase}) => {
     const authUser = useContext(AuthUserContext);
+    const history = useHistory();
+
     const handleSignOut = () => {
         firebase.signOut().then(() => {
-            console.log("pomyślnie wylogowano")
-            //routing and logout page to be added
+            history.push(ROUTES.LOGOUT);
         });
     }
     return (
@@ -18,11 +19,11 @@ const Navbar = ({firebase}) => {
             <div className="navigation container">
                 <div className="navigation__main">
                     {authUser ?
-                        <>
-                            <p>Cześć {authUser.email}</p>
+                        <div className="navigation__main__auth">
+                            <p>Cześć {authUser.email}!</p>
                             <Link to={ROUTES.GIVEAWAY}>Oddaj rzeczy</Link>
                             <button onClick={handleSignOut}>Wyloguj</button>
-                        </>
+                        </div>
                         :
                         <>
                             <Link to={ROUTES.LOGIN}>Zaloguj</Link>

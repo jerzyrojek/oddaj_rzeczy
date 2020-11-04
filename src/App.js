@@ -8,6 +8,7 @@ import LoginPage from "./components/LoginPage";
 import RegistrationPage from "./components/RegistrationPage";
 import {withFirebase} from "./components/Firebase/FirebaseContext";
 import AuthUserContext from "./components/AuthUserContext";
+import LogoutPage from "./components/LogoutPage";
 
 function App({firebase}) {
 
@@ -34,7 +35,7 @@ function App({firebase}) {
                         <Route path={ROUTES.GIVEAWAY}/>
                         <Route path={ROUTES.LOGIN} component={LoginPage}/>
                         <Route path={ROUTES.REGISTER} component={RegistrationPage}/>
-                        <Route path={ROUTES.LOGOUT}/>
+                        <Route path={ROUTES.LOGOUT} component={LogoutPage}/>
                         <Route exact path={ROUTES.HOME} component={Home}/>
                         <Route exact path={ROUTES.NOT_FOUND} component={NotFoundPage}/>
                     </Switch>

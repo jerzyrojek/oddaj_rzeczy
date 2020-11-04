@@ -15,6 +15,29 @@
         border: 0.75px solid $altSectionBackgroundColor;
       }
     }
+    &__auth {
+      display: flex;
+      align-items: center;
+      p {
+        font-size: 14px;
+        color:#000000;
+
+      }
+      a {
+        color:#000000;
+        border: 0.75px solid $altSectionBackgroundColor;
+        padding:9px 7px;
+        margin:0 20px;
+      }
+      button {
+        font-size:12px;
+        color:$buttonTextColor;
+        background:none;
+        border:none;
+        cursor: pointer;
+      }
+    }
+
   }
   &__homepage {
     ul {
