@@ -3,10 +3,11 @@ import {Form, Field} from "react-final-form";
 import decoration from "../assets/Decoration.svg";
 import * as ROUTES from "../routes.js";
 import {withFirebase} from "./Firebase/FirebaseContext";
-import {Link} from "react-router-dom";
+import {Link, useHistory} from "react-router-dom";
 
 
 const LoginPage = ({firebase}) => {
+    const history = useHistory();
     const required = value => (value ? undefined : 'Wymagane');
     const validEmail = (value) => {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -18,7 +19,9 @@ const LoginPage = ({firebase}) => {
 
     const handleSignIn = ({email, password}) => {
         firebase.signInEmailAndPassword(email, password).then((res) => {
-            console.log(res);
+            setTimeout(() => {
+                history.push(ROUTES.HOME);
+            },2000)
         })
     }
 
