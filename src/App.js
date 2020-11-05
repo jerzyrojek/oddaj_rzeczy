@@ -9,6 +9,7 @@ import RegistrationPage from "./components/RegistrationPage";
 import {withFirebase} from "./components/Firebase/FirebaseContext";
 import AuthUserContext from "./components/AuthUserContext";
 import LogoutPage from "./components/LogoutPage";
+import GiveawayPage from "./components/GiveawayPage";
 
 function App({firebase}) {
 
@@ -32,7 +33,7 @@ function App({firebase}) {
                 <BrowserRouter>
                     <Navigation/>
                     <Switch>
-                        <Route path={ROUTES.GIVEAWAY}/>
+                        <Route path={ROUTES.GIVEAWAY} component={GiveawayPage}/>
                         <Route path={ROUTES.LOGIN} component={LoginPage}/>
                         <Route path={ROUTES.REGISTER} component={RegistrationPage}/>
                         <Route path={ROUTES.LOGOUT} component={LogoutPage}/>
