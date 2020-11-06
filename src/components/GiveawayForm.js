@@ -12,6 +12,8 @@ const GiveawayForm = () => {
         itemCategory: "",
         numberOfBags: 0,
         location: "",
+        helpGroups:[],
+        locationSpecific:"",
         street: "",
         city: "",
         postCode: "",
@@ -20,6 +22,10 @@ const GiveawayForm = () => {
         time: "",
         additionalInfo: "",
     });
+
+    const [formStep, setFormStep] = useState({
+        currentStep:1,
+    })
 
     const handleOnChangeInput = (e) => {
         const {name, value} = e.target;
@@ -30,32 +36,42 @@ const GiveawayForm = () => {
             };
         })
     }
+    const handleChangeCheckbox = (e) => {
+
+        const {name, value, checked} = e.target;
+        if(checked){
+            setFormData(prev => ({...prev, [name]:[...prev.helpGroups, value]}))
+        } else if (!checked) {
+            setFormData(prev => ({...prev, [name]: prev.helpGroups.filter((element) => element !== value)}))
+        }
+    }
 
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("test123lol");
+        console.log(formData);
     }
 
     const nextStep = () => {
-        setFormData(prev => ({...prev, step: prev.step + 1}))
+        setFormStep(prev => ({...prev, currentStep: prev.currentStep + 1}))
     }
 
     const prevStep = () => {
-        setFormData(prev => ({...prev, step: prev.step - 1}))
+        setFormStep(prev => ({...prev, currentStep: prev.currentStep - 1}))
     }
 
     const pageToDisplay = () => {
-        switch (formData.step) {
+        switch (formStep.currentStep) {
             case 1:
                 return <StepOne next={nextStep} handleChange={handleOnChangeInput} data={formData}/>
             case 2:
-                return <StepTwo prev={prevStep} next={nextStep} handleChange={handleOnChangeInput}/>
+                return <StepTwo prev={prevStep} next={nextStep} handleChange={handleOnChangeInput} data={formData}/>
             case 3:
-                return <StepThree prev={prevStep} next={nextStep} handleChange={handleOnChangeInput}/>
+                return <StepThree prev={prevStep} next={nextStep} handleChange={handleOnChangeInput} handleCheckbox={handleChangeCheckbox} data={formData}/>
             case 4:
-                return <StepFour prev={prevStep} next={nextStep} handleChange={handleOnChangeInput}/>
+                return <StepFour prev={prevStep} next={nextStep} handleChange={handleOnChangeInput} data={formData}/>
             case 5:
-                return <StepSummary prev={prevStep}/>
+                return <StepSummary prev={prevStep} data={formData}/>
             case 6:
                 return <StepFinal/>
         }
