@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 const StepOne = ({next, data, handleChange}) => {
 
@@ -8,6 +8,12 @@ const StepOne = ({next, data, handleChange}) => {
         toys: "zabawki",
         books: "książki",
         others: "inne",
+    }
+
+    const [errorStatus, setErrorStatus] = useState(false)
+
+    const showError = () => {
+        setErrorStatus(true);
     }
 
     return (
@@ -54,7 +60,8 @@ const StepOne = ({next, data, handleChange}) => {
                     </div>
 
 
-                    <button onClick={next}>Dalej</button>
+                    <button type="button" onClick={data.itemCategory !== "" ? next : showError}>Dalej</button>
+                    {errorStatus && <span>Wymagane wybranie kategorii</span>}
                 </div>
             </div>
 
