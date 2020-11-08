@@ -59,9 +59,8 @@ const StepOne = ({next, data, handleChange}) => {
                         <label htmlFor="other"><span/>{radioOptions.others}</label>
                     </div>
 
-
-                    <button type="button" onClick={data.itemCategory !== "" ? next : showError}>Dalej</button>
-                    {errorStatus ? <span className="error">Wymagane wybranie kategorii</span> : <span/>}
+                    {errorStatus ? <span className="error">Wymagane wybranie kategorii</span> : <span className="error__hidden"/>}
+                    <button className="next" type="button" onClick={data.itemCategory !== "" ? next : showError}>Dalej</button>
                 </div>
             </div>
 
