@@ -28,40 +28,40 @@ const StepOne = ({next, data, handleChange}) => {
             <div className="giveawayForm__inputs">
                 <div className="stepOne container">
                     <p>Krok 1/4</p>
-                    <h1>Zaznacz co chcesz oddać:</h1>
-                    <div className="item">
+                    <h2>Zaznacz co chcesz oddać:</h2>
+                    <div className="stepOne__radio">
                         <input onChange={handleChange} id="usableClothes"
                                checked={data.itemCategory === radioOptions.clothesToBeUsed}
                                value={radioOptions.clothesToBeUsed} name="itemCategory" type="radio"/>
-                        <label htmlFor="usableClothes">{radioOptions.clothesToBeUsed}</label>
+                        <label htmlFor="usableClothes"><span/>{radioOptions.clothesToBeUsed}</label>
                     </div>
 
-                    <div className="item">
+                    <div className="stepOne__radio">
                         <input onChange={handleChange} id="unusableClothes"
                                checked={data.itemCategory === radioOptions.clothesNonUsable}
                                value={radioOptions.clothesNonUsable} name="itemCategory"
                                type="radio"/>
-                        <label htmlFor="unusableClothes">{radioOptions.clothesNonUsable}</label>
+                        <label htmlFor="unusableClothes"><span/>{radioOptions.clothesNonUsable}</label>
                     </div>
-                    <div className="item">
+                    <div className="stepOne__radio">
                         <input checked={data.itemCategory === radioOptions.toys} onChange={handleChange} id="toys"
                                value={radioOptions.toys} name="itemCategory" type="radio"/>
-                        <label htmlFor="toys">{radioOptions.toys}</label>
+                        <label htmlFor="toys"><span/>{radioOptions.toys}</label>
                     </div>
-                    <div className="item">
+                    <div className="stepOne__radio">
                         <input checked={data.itemCategory === radioOptions.books} onChange={handleChange} id="books"
                                value={radioOptions.books} name="itemCategory" type="radio"/>
-                        <label htmlFor="books">{radioOptions.books}</label>
+                        <label htmlFor="books"><span/>{radioOptions.books}</label>
                     </div>
-                    <div className="item">
+                    <div className="stepOne__radio">
                         <input checked={data.itemCategory === radioOptions.others} onChange={handleChange} id="other"
                                value={radioOptions.others} name="itemCategory" type="radio"/>
-                        <label htmlFor="other">{radioOptions.others}</label>
+                        <label htmlFor="other"><span/>{radioOptions.others}</label>
                     </div>
 
 
                     <button type="button" onClick={data.itemCategory !== "" ? next : showError}>Dalej</button>
-                    {errorStatus && <span>Wymagane wybranie kategorii</span>}
+                    {errorStatus ? <span className="error">Wymagane wybranie kategorii</span> : <span/>}
                 </div>
             </div>
 
