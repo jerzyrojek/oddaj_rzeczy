@@ -26,6 +26,22 @@
   &__inputs {
     background: url(../assets/Background-Form.jpg) no-repeat;
     height: 883px;
+
+    button {
+      font-family: inherit;
+      font-weight: 300;
+      font-size:24px;
+      padding:23px 63px;
+      background:none;
+      width: 180px;
+      border: 0.75px solid $primaryTextColor;
+    }
+    .prev {
+      padding:23px 52px;
+    }
+    .next {
+      padding:23px 63px;
+    }
   }
 }
 
