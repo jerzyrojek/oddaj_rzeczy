@@ -1,0 +1,49 @@
+.giveawayForm {
+  &__notice {
+    height: 180px;
+    background:$altSectionBackgroundColor;
+
+    .container {
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      border:1px solid transparent;
+      height: 100%;
+      h1 {
+        font-size:36px;
+        font-weight: 600;
+        line-height: 50px;
+        color:#000000;
+      }
+      p{
+        color:$primaryTextColor;
+        font-size:22px;
+        line-height: 30px;
+      }
+  }
+
+  }
+  &__inputs {
+    background: url(../assets/Background-Form.jpg) no-repeat;
+    height: 883px;
+
+    button {
+      font-family: inherit;
+      font-weight: 300;
+      font-size:24px;
+      padding:23px 63px;
+      background:none;
+      width: 180px;
+      border: 0.75px solid $primaryTextColor;
+    }
+    .prev {
+      padding:23px 52px;
+      margin-right: 50px;
+    }
+    .next {
+      padding:23px 63px;
+    }
+  }
+}
+
+

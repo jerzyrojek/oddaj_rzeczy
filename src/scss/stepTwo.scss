@@ -1,0 +1,52 @@
+.giveawayForm__inputs {
+  .stepTwo {
+    display:flex;
+    flex-direction: column;
+
+    p {
+      margin-top:36px;
+      margin-bottom:70px;
+      font-size:24px;
+      font-weight: 300;
+    }
+
+    h2 {
+      color:#000000;
+      font-size:36px;
+      font-weight: 600;
+      margin-bottom:50px;
+    }
+
+    label {
+      font-size:24px;
+      line-height: 32px;
+      font-weight: 300;
+      color:#000000;
+    }
+
+    select {
+      appearance: none;
+      width: 300px;
+      height: 50px;
+      margin-left:26px;
+      font-size:24px;
+      padding:8px 18px;
+      color:#000000;
+      margin-bottom:448px;
+      background: none;
+      border:0.75px solid $primaryTextColor;
+
+
+      &::-ms-expand {
+        display:none;
+      }
+    }
+
+    .error__hidden{
+      height: 22px;
+    }
+    .error {
+      color:red;
+    }
+  }
+}

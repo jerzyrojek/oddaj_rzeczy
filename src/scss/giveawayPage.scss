@@ -1,0 +1,69 @@
+.giveawayPage {
+  header {
+    height: 698px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__image {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+  }
+
+  &__text {
+    margin-right: 50px;
+    h1 {
+      font-weight: 400;
+      font-size:38px;
+      span {
+        text-transform: uppercase;
+      }
+    }
+    width: 665px;
+    text-align: center;
+    margin-top:135px;
+
+   h2 {
+     font-weight: 300;
+     font-size:40px;
+     line-height: 55px;
+     margin-bottom:45px;
+   }
+
+    img {
+      margin-top:25px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__steps {
+    display:flex;
+    font-weight: 300;
+    p {
+      position: relative;
+      width: 180px;
+      font-size:22px;
+      span {
+        display: block;
+        &:first-child {
+          font-size:32px;
+          line-height: 42px;
+          margin-bottom: 10px;
+        }
+      }
+
+      &:after {
+        position:absolute;
+        content: "";
+        width: 140px;
+        height: 140px;
+        border: 1px solid $primaryTextColor;
+        top:0;
+        left:50%;
+        transform:translate(-50%,0) rotate(45deg);
+      }
+
+    }
+  }
+}

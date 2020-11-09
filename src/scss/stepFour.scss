@@ -1,0 +1,65 @@
+.giveawayForm__inputs {
+  .stepFour {
+    display:flex;
+    flex-direction: column;
+    p {
+      margin-top:36px;
+      margin-bottom: 70px;
+      font-size:24px;
+    }
+
+    h1 {
+      font-size:36px;
+      line-height: 45px;
+      margin-bottom: 50px;
+      color:#000000;
+    }
+
+    &__giveawayDetails {
+      display: flex;
+      margin-bottom: 205px;
+
+      h2 {
+        margin-bottom: 20px;
+      }
+      div {
+        width: 392px;
+        display: flex;
+        flex-direction: column;
+        .inputField {
+          display:flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: center;
+          height: 40px;
+          margin-bottom: 20px;
+
+          label {
+            font-size:24px;
+            line-height: 28px;
+            font-weight: 300;
+            max-width: 115px;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          input {
+            width: 256px;
+            background: none;
+            height: 90%;
+            font-size:20px;
+            padding:0 10px;
+            border: 0.75px solid $primaryTextColor;
+          }
+        }
+        &:first-child {
+          margin-right: 152px;
+        }
+
+      }
+
+    }
+
+  }
+}
