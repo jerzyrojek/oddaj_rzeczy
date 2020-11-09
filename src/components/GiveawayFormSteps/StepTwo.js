@@ -20,8 +20,9 @@ const StepTwo = ({prev, next, handleChange, data}) => {
             <div className="giveawayForm__inputs">
                 <div className="stepTwo container">
                     <p>Krok 2/4</p>
-                    <h1>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy</h1>
-                    <label htmlFor="bagsQuantity">Liczba 60l worków:</label>
+                    <h2>Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy</h2>
+                    <div>
+                        <label htmlFor="bagsQuantity">Liczba 60l worków:</label>
                         <select id="bagsQuantity" required name="numberOfBags" onChange={handleChange} value={data.numberOfBags}>
                             <option disabled value={0}>wybierz</option>
                             <option value={1}>1</option>
@@ -30,9 +31,12 @@ const StepTwo = ({prev, next, handleChange, data}) => {
                             <option value={4}>4</option>
                             <option value={5}>5</option>
                         </select>
-                    <button onClick={prev}>Wstecz</button>
-                    <button type="button" onClick={data.numberOfBags !== 0 ? next : showError}>Dalej</button>
-                    {errorStatus && <span>Wymagane wybranie ilości worków</span>}
+                    </div>
+                    {errorStatus ? <span className="error">Wymagane wybranie ilości worków</span> : <span className="error__hidden"/>}
+                    <div>
+                        <button className="prev" onClick={prev}>Wstecz</button>
+                        <button className="next" type="button" onClick={data.numberOfBags !== 0 ? next : showError}>Dalej</button>
+                    </div>
                 </div>
             </div>
 
