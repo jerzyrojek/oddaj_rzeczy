@@ -5,6 +5,7 @@
     p {
       margin-top:36px;
       margin-bottom: 70px;
+      font-size:24px;
     }
 
     h1 {
@@ -47,6 +48,8 @@
             width: 256px;
             background: none;
             height: 90%;
+            font-size:20px;
+            padding:0 10px;
             border: 0.75px solid $primaryTextColor;
           }
         }
