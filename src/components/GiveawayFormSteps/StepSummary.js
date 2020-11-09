@@ -10,25 +10,60 @@ const StepSummary = ({prev, data}) => {
                 <div className="stepSummary container">
                     <h1>Podsumowanie Twojej darowizny</h1>
                     <h2>Oddajesz:</h2>
-                    <img src={shirtIcon} alt="shirt"/>
+                    <div className="itemSummary">
+                        <img src={shirtIcon} alt="shirt"/>
                         <p>{data.numberOfBags} worki, {data.itemCategory}, {[...data.helpGroups].join(", ")}</p>
-                    <img src={refreshIcon} alt=""/>
+                    </div>
+                    <div className="itemSummary">
+                        <img src={refreshIcon} alt=""/>
                         <p>dla lokalizacji: {data.location}</p>
+                    </div>
+                    <div className="giveawaySummary">
+                        <div>
+                            <h2>Adres odbioru:</h2>
+                            <div className="giveawaySummary__item">
+                                <p>Ulica </p>
+                                <span>{data.street}</span>
+                            </div>
 
-                    <h2>Adres odbioru:</h2>
-                    <p>Ulica <span>{data.street}</span></p>
-                    <p>Miasto <span>{data.city}</span></p>
-                    <p>Kod pocztowy<span>{data.postCode}</span></p>
-                    <p>Numer telefonu <span>{data.phoneNumber}</span></p>
+                            <div className="giveawaySummary__item">
+                                <p>Miasto</p>
+                                <span>{data.city}</span>
+                            </div>
+                            <div className="giveawaySummary__item">
+                                <p>Kod pocztowy</p>
+                                <span>{data.postCode}</span>
+                            </div>
+                            <div className="giveawaySummary__item">
+                                <p>Numer telefonu</p>
+                                <span>{data.phoneNumber}</span>
+                            </div>
 
+                        </div>
 
-                    <h2>Termin odbioru:</h2>
-                    <p>Data <span>{data.date}</span></p>
-                    <p>Godzina <span>{data.time}</span></p>
-                    <p>Uwagi dla kuriera <span>{data.additionalInfo}</span></p>
+                        <div>
+                            <h2>Termin odbioru:</h2>
+                            <div className="giveawaySummary__item">
+                                <p>Data</p>
+                                <span>{data.date}</span>
+                            </div>
+                            <div className="giveawaySummary__item">
+                                <p>Godzina</p>
+                                <span>{data.time}</span>
+                            </div>
+                            <div className="giveawaySummary__item">
+                                <p>Uwagi dla kuriera </p>
+                                <span>{data.additionalInfo}</span>
+                            </div>
 
-                    <button onClick={prev}>Wstecz</button>
-                    <button type="submit">Potwierdzam</button>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <button className="prev" onClick={prev}>Wstecz</button>
+                        <button className="formSubmit" type="submit">Potwierdzam</button>
+                    </div>
                 </div>
             </div>
         </>
