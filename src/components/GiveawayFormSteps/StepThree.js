@@ -29,19 +29,19 @@ const StepThree = ({prev, next, handleChange, handleCheckbox, data}) => {
 
                     <h3>Komu chcesz pomóc?</h3>
                     <div className="stepThree__checkboxes">
-                        <input onChange={handleCheckbox} name="helpGroups" value="dzieciom" id="children" type="checkbox"/>
+                        <input checked={data.helpGroups.includes("dzieciom")} onChange={handleCheckbox} name="helpGroups" value="dzieciom" id="children" type="checkbox"/>
                         <label htmlFor="children">dzieciom</label>
 
-                        <input onChange={handleCheckbox} name="helpGroups" id="singleMothers" value="samotnym matkom" type="checkbox"/>
+                        <input checked={data.helpGroups.includes("samotnym matkom")} onChange={handleCheckbox} name="helpGroups" id="singleMothers" value="samotnym matkom" type="checkbox"/>
                         <label htmlFor="singleMothers">samotnym matkom</label>
 
-                        <input onChange={handleCheckbox} name="helpGroups" id="homeless" value="bezdomnym" type="checkbox"/>
+                        <input checked={data.helpGroups.includes("bezdomnym")} onChange={handleCheckbox} name="helpGroups" id="homeless" value="bezdomnym" type="checkbox"/>
                         <label htmlFor="homeless">bezdomnym</label>
 
-                        <input onChange={handleCheckbox} name="helpGroups" id="disabled" value="niepełnosprawnym" type="checkbox"/>
+                        <input checked={data.helpGroups.includes("niepełnosprawnym")} onChange={handleCheckbox} name="helpGroups" id="disabled" value="niepełnosprawnym" type="checkbox"/>
                         <label htmlFor="disabled">niepełnosprawnym</label>
 
-                        <input onChange={handleCheckbox} name="helpGroups" id="elderly" value="osobom starszym" type="checkbox"/>
+                        <input checked={data.helpGroups.includes("osobom starszym")} onChange={handleCheckbox} name="helpGroups" id="elderly" value="osobom starszym" type="checkbox"/>
                         <label htmlFor="elderly">osobom starszym</label>
 
                     </div>
