@@ -1,0 +1,81 @@
+.giveawayForm__inputs {
+  .stepThree {
+    display:flex;
+    flex-direction: column;
+
+    p {
+      margin-top:36px;
+      margin-bottom:70px;
+
+    }
+
+    h2 {
+      font-size:36px;
+      line-height: 45px;
+      margin-bottom: 15px;
+    }
+
+
+    label {
+      font-size:24px;
+      line-height: 32px;
+      font-weight: 300;
+      padding:11px 20px;
+      margin-right: 24px;
+      border:0.75px solid $primaryTextColor;
+      color:#000000;
+    }
+
+    select {
+      appearance: none;
+      width: 300px;
+      height: 50px;
+      font-size:24px;
+      padding:8px 18px;
+      color:#000000;
+      background: none;
+      margin-bottom:50px;
+      border:0.75px solid $primaryTextColor;
+
+
+      &::-ms-expand {
+        display:none;
+      }
+    }
+
+    h3 {
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 32px;
+      margin-bottom: 20px;
+    }
+
+    &__checkboxes {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      input {
+        visibility: hidden;
+        width: 0;
+
+        &:checked + label {
+          background: $altSectionBackgroundColor;
+        }
+      }
+
+
+      max-width: 650px;
+      margin-bottom: 46px;
+      height:135px;
+    }
+
+    .specificLocation {
+      margin-bottom: 120px;
+      font-size:25px;
+      max-width: 570px;
+      background:none;
+      height: 40px;
+      border:0.75px solid $primaryTextColor;
+    }
+  }
+}
