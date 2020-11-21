@@ -7,7 +7,7 @@
   margin-top: 55px;
 
   h1 {
-    font-size:38px;
+    font-size: 38px;
     font-weight: 400;
     margin-bottom: 25px;
   }
@@ -39,7 +39,7 @@
     }
 
     p {
-      font-size:17px;
+      font-size: 17px;
       font-weight: 400;
     }
 
@@ -48,6 +48,7 @@
         margin-bottom: 6px;
       }
     }
+
     &:nth-child(4) {
       img {
         margin-bottom: 8px;
@@ -56,29 +57,30 @@
 
 
     hr {
-      margin:10px 0;
+      margin: 10px 0;
       width: 70px;
       color: #707070;
     }
   }
+
   button {
     font-family: $font-base, "sans-serif";
-    cursor:pointer;
+    cursor: pointer;
     text-align: center;
-    margin-top:35px;
+    margin-top: 35px;
     width: 310px;
     text-transform: uppercase;
-    padding:13px 93px;
-    background-color:white;
-    font-size:34px;
+    padding: 13px 93px;
+    background-color: white;
+    font-size: 34px;
     line-height: 45px;
     font-weight: 200;
     border: 0.75px solid $primaryTextColor;
-    color:$primaryTextColor;
+    color: $primaryTextColor;
 
     &:hover {
-      transform:scale(1.1);
-      transition:0.3s ease-in;
+      background: $sectionBackgroundColor;
+      transition: 0.3s ease-in;
     }
   }
 }
