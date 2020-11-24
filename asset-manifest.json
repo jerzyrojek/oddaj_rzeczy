@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/oddaj_rzeczy/static/css/main.605607b4.chunk.css",
-    "main.js": "/oddaj_rzeczy/static/js/main.09f21196.chunk.js",
-    "main.js.map": "/oddaj_rzeczy/static/js/main.09f21196.chunk.js.map",
+    "main.js": "/oddaj_rzeczy/static/js/main.899a420c.chunk.js",
+    "main.js.map": "/oddaj_rzeczy/static/js/main.899a420c.chunk.js.map",
     "runtime-main.js": "/oddaj_rzeczy/static/js/runtime-main.0b63ab20.js",
     "runtime-main.js.map": "/oddaj_rzeczy/static/js/runtime-main.0b63ab20.js.map",
     "static/js/2.b7efd10b.chunk.js": "/oddaj_rzeczy/static/js/2.b7efd10b.chunk.js",
@@ -30,6 +30,6 @@
     "static/js/runtime-main.0b63ab20.js",
     "static/js/2.b7efd10b.chunk.js",
     "static/css/main.605607b4.chunk.css",
-    "static/js/main.09f21196.chunk.js"
+    "static/js/main.899a420c.chunk.js"
   ]
 }
