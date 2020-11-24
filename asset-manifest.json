@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/oddaj_rzeczy/static/css/main.605607b4.chunk.css",
+    "main.js": "/oddaj_rzeczy/static/js/main.09f21196.chunk.js",
+    "main.js.map": "/oddaj_rzeczy/static/js/main.09f21196.chunk.js.map",
+    "runtime-main.js": "/oddaj_rzeczy/static/js/runtime-main.0b63ab20.js",
+    "runtime-main.js.map": "/oddaj_rzeczy/static/js/runtime-main.0b63ab20.js.map",
+    "static/js/2.b7efd10b.chunk.js": "/oddaj_rzeczy/static/js/2.b7efd10b.chunk.js",
+    "static/js/2.b7efd10b.chunk.js.map": "/oddaj_rzeczy/static/js/2.b7efd10b.chunk.js.map",
+    "static/js/3.787511c6.chunk.js": "/oddaj_rzeczy/static/js/3.787511c6.chunk.js",
+    "static/js/3.787511c6.chunk.js.map": "/oddaj_rzeczy/static/js/3.787511c6.chunk.js.map",
+    "index.html": "/oddaj_rzeczy/index.html",
+    "static/css/main.605607b4.chunk.css.map": "/oddaj_rzeczy/static/css/main.605607b4.chunk.css.map",
+    "static/js/2.b7efd10b.chunk.js.LICENSE.txt": "/oddaj_rzeczy/static/js/2.b7efd10b.chunk.js.LICENSE.txt",
+    "static/media/main.scss": "/oddaj_rzeczy/static/media/Background-Form.d4bc6c85.jpg",
+    "static/media/Decoration.aad75271.svg": "/oddaj_rzeczy/static/media/Decoration.aad75271.svg",
+    "static/media/Facebook.1c1ea3ae.svg": "/oddaj_rzeczy/static/media/Facebook.1c1ea3ae.svg",
+    "static/media/Form-Hero-Image.75cd7726.jpg": "/oddaj_rzeczy/static/media/Form-Hero-Image.75cd7726.jpg",
+    "static/media/HeroImage.1bee5467.png": "/oddaj_rzeczy/static/media/HeroImage.1bee5467.png",
+    "static/media/HeroImage@2x.473c8ca5.png": "/oddaj_rzeczy/static/media/HeroImage@2x.473c8ca5.png",
+    "static/media/Icon-1.bd3d092a.svg": "/oddaj_rzeczy/static/media/Icon-1.bd3d092a.svg",
+    "static/media/Icon-2.cfac69a1.svg": "/oddaj_rzeczy/static/media/Icon-2.cfac69a1.svg",
+    "static/media/Icon-3.564c1731.svg": "/oddaj_rzeczy/static/media/Icon-3.564c1731.svg",
+    "static/media/Icon-4.f1b3fb6d.svg": "/oddaj_rzeczy/static/media/Icon-4.f1b3fb6d.svg",
+    "static/media/Instagram.5b663cf3.svg": "/oddaj_rzeczy/static/media/Instagram.5b663cf3.svg",
+    "static/media/People.2fa041c6.jpg": "/oddaj_rzeczy/static/media/People.2fa041c6.jpg",
+    "static/media/Signature.8f2a001d.svg": "/oddaj_rzeczy/static/media/Signature.8f2a001d.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b63ab20.js",
+    "static/js/2.b7efd10b.chunk.js",
+    "static/css/main.605607b4.chunk.css",
+    "static/js/main.09f21196.chunk.js"
+  ]
+}
