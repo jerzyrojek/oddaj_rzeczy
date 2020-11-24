@@ -16,7 +16,7 @@ function App({firebase}) {
     const [authUser, setAuthUser] = useState(null);
     useEffect(() => {
         const listener = firebase.onAuthUserListener(authUser => {
-                setAuthUser(authUser);
+            setAuthUser(authUser);
         }, () => {
             setAuthUser(null);
         });
@@ -28,9 +28,9 @@ function App({firebase}) {
     }, []);
 
     return (
-        <AuthUserContext.Provider value = {authUser}>
+        <AuthUserContext.Provider value={authUser}>
             <div className="app">
-                <BrowserRouter>
+                <BrowserRouter basename="/oddaj_rzeczy">
                     <Navigation/>
                     <Switch>
                         <Route path={ROUTES.GIVEAWAY} component={GiveawayPage}/>
