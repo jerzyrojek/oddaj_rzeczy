@@ -2,6 +2,8 @@
 
 A project of a polish website allowing people to schedule pickups of old clothing/toys that they don't need for charity
 
+Project available at https://jerzyrojek.github.io/oddaj_rzeczy/
+
 ## Description
 
 This app was based on an Adobe XD project provided by a junior UI/UX designer. Only a desktop design was given so the app is not responsive. The project was a simulation of a Scrum sprint with a deadline cutoff, hence some aspects of the website could still be polished.
